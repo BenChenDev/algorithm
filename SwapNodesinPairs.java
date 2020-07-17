@@ -6,7 +6,11 @@ You may not modify the values in the list's nodes, only nodes itself may be chan
 
 Example:
 
-Given 1->2->3->4, you should return the list as 2->1->4->3.*/
+Given 1->2->3->4, you should return the list as 2->1->4->3.
+
+
+Note: the key point of doing this question is understanding the structure of a linked list data structure 
+*/
 
 /**
  * Definition for singly-linked list.
@@ -53,4 +57,17 @@ class Solution {
       
       return result;
   }
+
+  //recursively
+    
+  if(head == nul || head.next == null){
+    return head;
+  }
+
+  ListNode nxt = head.next;
+  head.next = swapPairs(nxt.next);
+  nxt.next = head;
+
+  return nxt;
+
 }

@@ -21,7 +21,10 @@ Explanation:
 P     I    N
 A   L S  I G
 Y A   H R
-P     I */
+P     I 
+
+Note: this is more like a math question
+*/
 
 public class ZigZagConversion {
     public String convert(String s, int numRows) {
